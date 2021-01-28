@@ -1,0 +1,21 @@
+@import '../../App.scss';
+#projects {
+    background: $secondary;
+    overflow: hidden;
+    position: relative;
+    .projects-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: -17px;
+        overflow-y: scroll;
+    }
+    .scrollable {
+        border: 1px solid white;
+        border-radius: 5px;
+        width: 70%;
+        height: 400px;
+        margin: 5em auto;
+    }
+}

@@ -1,7 +1,9 @@
 @import '../../App.scss';
 
 #welcome-section {
-    min-height: 434px;
+    width: 100%;
+    padding-top: 5em;
+    background: $third;
     h1, p {
         font-family: Poppins;
         text-align: center;
@@ -9,10 +11,11 @@
     h1 {
         font-size: 300%;
         margin-top: 2em;
+        color: $secondary;
     }
     .title {
         font-size: 120%;
-        color: darken($color: $main, $amount: 10%);
+        color: $secondary;
         font-weight: bold;
     }
 
@@ -20,11 +23,11 @@
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
-        background-image: url('../../assets/images/cactus.gif');
-        width: 200px;
-        height: 200px;
+        background-image: url('../../assets/images/walking.gif');
+        width: 400px;
+        height: 400px;
         margin: 0 auto;
-        margin-top: 8em;
+        margin-top: 4em;
     }
 
     .social-media {
@@ -54,5 +57,9 @@
     .github {
         background-image: url('../../assets/images/github.svg');
     }
+}
 
+#wave-canvas {
+    position: fixed;
+    bottom: 0;
 }

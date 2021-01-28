@@ -1,22 +1,20 @@
 import React, { useEffect, useRef } from 'react';
-import { render } from './wave';
+
 import './style.scss';
 
 const Welcome: React.FC = () => {
-
-    const canvasRef = useRef(null);
+    const welcomeRef = useRef(null);
 
     useEffect(() => {
-        const waveAnimaiton = setInterval(() => {
-            render(canvasRef.current);
-        }, 20)
-
-        return () => clearInterval(waveAnimaiton);
+        const welcomeDiv = welcomeRef.current as HTMLDivElement | null;
+        if (welcomeDiv) {
+            welcomeDiv.style.height=`${window.innerHeight}px`;
+        }
     }, [])
 
     return (
         <>
-        <div id="welcome-section">
+        <div id="welcome-section" ref={welcomeRef}>
             <h1>Leamsi Escribano</h1>
             <p className="title">Web Developer | Software Engineer</p>
 
@@ -25,14 +23,9 @@ const Welcome: React.FC = () => {
                 <a href="/" className="github"></a>
             </div>
 
-            <div className="cactus"></div>
-
-            
-
-
-
+            <div className="cactus">
+            </div>
         </div>
-        <canvas ref={canvasRef} className="wave-xp" id="wave-canvas"></canvas>
         </>
     )
 }

@@ -16,7 +16,7 @@ const params = {
 	RESET: false
 };
 
-export const render = (canvas) => {
+export const render = (canvas, color1, color2) => {
 
     const ctx = canvas.getContext('2d');
 
@@ -29,9 +29,9 @@ export const render = (canvas) => {
 
 		// Color and increase gradually opacity
 		if (j === 0) {
-			ctx.fillStyle = '##c23c3c';
+			ctx.fillStyle = color1;
 		} else {
-			ctx.fillStyle = params.COLOR;
+			ctx.fillStyle = color2;
 		}
 		ctx.globalAlpha = wavesOpacities[j];
 

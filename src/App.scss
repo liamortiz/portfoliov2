@@ -4,10 +4,24 @@
 }
 
 $main: #E24A4A;
-$secondary: #3D3D3D;
-$third: #EAF84A;
+$secondary: #333333;
+$third: #F8EFE4;
 
 @font-face {
     font-family: 'Poppins';
     src: url('./assets/fonts/Poppins.ttf');
+}
+
+.App {
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: lighten($color: $secondary, $amount: 10%);
+}
+::-webkit-scrollbar-track {
+    background: rgb(219, 219, 219);
 }
