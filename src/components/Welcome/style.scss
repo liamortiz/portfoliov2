@@ -1,0 +1,58 @@
+@import '../../App.scss';
+
+#welcome-section {
+    min-height: 434px;
+    h1, p {
+        font-family: Poppins;
+        text-align: center;
+    }
+    h1 {
+        font-size: 300%;
+        margin-top: 2em;
+    }
+    .title {
+        font-size: 120%;
+        color: darken($color: $main, $amount: 10%);
+        font-weight: bold;
+    }
+
+    .cactus {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('../../assets/images/cactus.gif');
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        margin-top: 8em;
+    }
+
+    .social-media {
+        width: 170px;
+        margin: 0 auto;
+        margin-top: 2em;
+    }
+
+    .linkedin, .github {
+        display: block;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 50px;
+        height: 50px;
+        float: left;
+        margin: 0 1em;
+        transition: all .2s;
+        &:hover {
+            transform:translateY(-10px);
+        }
+    }
+
+    .linkedin {
+        background-image: url('../../assets/images/linkedin.svg');
+    }
+    .github {
+        background-image: url('../../assets/images/github.svg');
+    }
+
+}
