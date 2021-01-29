@@ -24,14 +24,9 @@ window.onscroll = () => {
     
     const projectElm = document.getElementById('projects') as HTMLDivElement;
     const skillsElm = document.getElementById('skills-section') as HTMLDivElement;
-    const contactElm = document.getElementById('contact-section') as HTMLDivElement;
 
     const projectPos = projectElm.getBoundingClientRect().top;
     const skillsPos = skillsElm.getBoundingClientRect().top;
-    const contactPos = contactElm.getBoundingClientRect().top;
-
-    console.log(skillsPos);
-    
 
     if (previousScrollTop < 200) {
       currentColors = 0;
@@ -44,7 +39,7 @@ window.onscroll = () => {
     if (skillsPos < 500 && skillsPos > 1) {
       changeActiveNav(2);
     }
-    if (skillsPos < 1) {
+    if (skillsPos < 100) {
       changeActiveNav(3);
     }
 }
