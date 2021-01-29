@@ -25,3 +25,44 @@ $third: #F8EFE4;
 ::-webkit-scrollbar-track {
     background: rgb(219, 219, 219);
 }
+
+@keyframes hover {
+    from {
+        top: 820px;
+    }
+    to {
+        top: 800px;
+    }
+}
+.division {
+    background: $main;
+    min-width: 300px;
+    width: 50%;
+    margin: 0 auto;
+    color: white;
+    z-index: 2;
+    border-radius: 5px;
+    position: absolute;
+
+    animation-name: hover;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-direction: alternate;
+
+    h3 {
+        text-align: center;
+        font-family: Poppins;
+    }
+}
+
+.skills-division {
+    left: 25%;
+    top: 1890px;
+}
+
+.project-division {
+    position: absolute;
+    left: 25%;
+    top: 810px;
+}

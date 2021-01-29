@@ -1,21 +1,82 @@
 @import '../../App.scss';
 #projects {
-    background: $secondary;
-    overflow: hidden;
+    background: white;
     position: relative;
-    .projects-container {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: -17px;
-        overflow-y: scroll;
-    }
     .scrollable {
-        border: 1px solid white;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
         border-radius: 5px;
-        width: 70%;
-        height: 400px;
+        width: 90%;
+        max-width: 1000px;
         margin: 5em auto;
+        img {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        &:nth-child(1) {
+            margin-top: 4em;
+        }
+    }
+    .project-preview {
+        text-align: center;
+        h2, p {
+            color: $secondary;
+            font-family: Poppins;
+        }
+        p {
+            text-align: left;
+            font-weight: lighter;
+            font-size: 90%;
+            font-family: 'Helvetica';
+            line-height: 1.5em;
+        }
+    }
+    .stack {
+        display: flex;
+        justify-content: center;
+        margin: 1em auto;
+        margin-bottom: 2em;
+        li {
+            list-style-type: none;
+            color: white;
+            float: left;
+            margin: 0 .2em;
+            background: $main;
+            height: 20px;
+            text-align: center;
+            font-size: 80%;
+            font-family: Poppins;
+            padding: .3em .5em;
+        }
+    }
+    .preview-image {
+        width: 450px;
+        margin-right: .5em;
+    }
+    .description {
+        border: 1px solid rgb(189, 189, 189);
+        padding: 1em 2em;
+        width: 500px;
+        max-width: 400px;    
+        span {
+            font-weight: bold;
+            margin-right: .2em;
+        }
+        p {
+            font-weight: 400;
+            margin-bottom: 2.5em;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            font-family: Poppins;
+            font-size: 80%;
+            margin: 0 1em;
+            background: $secondary;
+            border-radius: 10px;
+            padding: .4em 1em;
+        }
     }
 }

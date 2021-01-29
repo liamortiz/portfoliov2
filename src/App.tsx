@@ -3,6 +3,7 @@ import './App.scss';
 import Navigation from './components/Navigation/Navigation';
 import Welcome from './components/Welcome/Welcome';
 import Projects from './components/Projects/Projects';
+import Skills from './components/Skills/Skills';
 
 import React, { useRef, useEffect } from 'react';
 
@@ -14,7 +15,7 @@ let currentColors = 0;
 
 const WAVE_COLORS = [
   {c1: '#c23c3c', c2: '#E24A4A'},
-  {c1: 'white', c2: 'gray'}
+  {c1: 'black', c2: 'gray'}
 ];
 
 window.onscroll = () => {
@@ -62,8 +63,15 @@ function App() {
     <div className="App">
       <Navigation/>
       <Welcome/>
+      <div className="division project-division">
+        <h3>.projects</h3>
+      </div>
       <Projects/>
-      <canvas ref={canvasRef} className="wave-xp" id="wave-canvas"></canvas>
+      <div className="division skills-division">
+        <h3>.skills</h3>
+      </div>
+      <Skills/>
+      <canvas ref={canvasRef} height="50" className="wave-xp" id="wave-canvas"></canvas>
     </div>
   );
 }

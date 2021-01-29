@@ -1,5 +1,5 @@
 const wavesOpacities = [0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1];
-const canvasHeight = 100;
+const canvasHeight = 50;
 var speedInc = 0;
 
 const params = {
