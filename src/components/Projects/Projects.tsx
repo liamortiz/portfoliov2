@@ -14,7 +14,7 @@ const Projects: React.FC = () => {
                 <div className="project-preview scrollable">
                     <div className="preview-image">
                         <h2>Algorithm Imager</h2>
-                        <img src={project1Image}/>
+                        <img src={project1Image} alt="Algorithm Imager"/>
                     </div>
                     
                     <div className="description">
@@ -28,15 +28,15 @@ const Projects: React.FC = () => {
                             <li>S(CSS)</li>
                             <li>HTML</li>
                     </ul>
-                    <a href="/">View Demo</a>
-                    <a href="/">View Code</a>
+                    <a href="https://mayalexandera.github.io/AlgI/" target="_blank" rel="noreferrer">View Demo</a>
+                    <a href="https://github.com/mayalexandera/AlgI" target="_blank" rel="noreferrer">View Code</a>
                     </div>
                     
                 </div>
                 <div className="project-preview scrollable">
                     <div className="preview-image">
                         <h2>Green Paws eCommerce</h2>
-                        <img src={project2Image}/>
+                        <img src={project2Image} alt="Dogs Ecommerce Website"/>
                     </div>
 
                     <div className="description">
@@ -52,15 +52,15 @@ const Projects: React.FC = () => {
                             <li>RoR</li>
                             <li>Postgres</li>
                     </ul>
-                    <a href="/">View Demo</a>
-                    <a href="/">View Code</a>
+                    <a href="https://greenpawsv13.web.app/" target="_blank" rel="noreferrer">View Demo</a>
+                    <a href="https://github.com/liamortiz/greenpaws" target="_blank" rel="noreferrer">View Code</a>
                     </div>
 
                 </div>
                 <div className="project-preview scrollable">
                     <div className="preview-image">
                         <h2>Dog's Guardian | Pet Adoption</h2>
-                        <img src={project3Image}/>
+                        <img src={project3Image} alt="Pet Adoption Website"/>
                     </div>
 
                     <div className="description">
@@ -77,8 +77,8 @@ const Projects: React.FC = () => {
                             <li>TypeScript</li>
                             <li>Figma</li>
                         </ul>
-                    <a href="/">View Demo</a>
-                    <a href="/">View Code</a>
+                    <a href="https://dogs-guardian.web.app/" target="_blank" rel="noreferrer">View Demo</a>
+                    <a href="https://github.com/liamortiz/dogs-guardian" target="_blank" rel="noreferrer">View Code</a>
                     </div>
 
                 </div>

@@ -1,6 +1,33 @@
-@import '../../App.scss';
+@import '../../_variables.scss';
 
 #skills-section {
-    height: 20rem;
-    background: $third;
+    display: flex;
+    justify-content: center;
+    background: white;
+    margin: 0 auto;
+    margin-bottom: 4em;
+    padding: 2em;
+    flex-wrap: wrap;
+
+    .skill-box {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        text-align: center;
+        background: $secondary;
+        color: white;
+        border: 1px solid gray;
+        margin: 0 .2em;
+        box-shadow: 2px 2px 2px rgb(209, 209, 209);
+        h4 {
+            padding-top: 2em;
+            font-family: Poppins;
+        }
+        &:nth-child(even) {
+            background: $main;
+            border: 1px solid white;
+        }
+    }
+
 }

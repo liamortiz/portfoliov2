@@ -1,9 +1,11 @@
-@import '../../App.scss';
+@import '../../_variables.scss';
 
 #welcome-section {
     width: 100%;
     padding-top: 5em;
     background: $third;
+    box-sizing: border-box;
+    overflow: hidden;
     h1, p {
         font-family: Poppins;
         text-align: center;
@@ -57,9 +59,4 @@
     .github {
         background-image: url('../../assets/images/github.svg');
     }
-}
-
-#wave-canvas {
-    position: fixed;
-    bottom: 0;
 }

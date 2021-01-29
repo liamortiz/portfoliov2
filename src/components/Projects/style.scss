@@ -1,4 +1,4 @@
-@import '../../App.scss';
+@import '../../_variables.scss';
 #projects {
     background: white;
     position: relative;
@@ -52,14 +52,16 @@
         }
     }
     .preview-image {
-        width: 450px;
+        max-width: 450px;
         margin-right: .5em;
+
     }
     .description {
         border: 1px solid rgb(189, 189, 189);
-        padding: 1em 2em;
-        width: 500px;
-        max-width: 400px;    
+        padding: 1em 1em;
+        max-width: 400px;
+        box-sizing: border-box;
+        margin: 0 auto; 
         span {
             font-weight: bold;
             margin-right: .2em;
@@ -77,6 +79,14 @@
             background: $secondary;
             border-radius: 10px;
             padding: .4em 1em;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #projects {
+        .scrollable {
+            flex-direction: column;
         }
     }
 }

@@ -4,13 +4,13 @@ import Navigation from './components/Navigation/Navigation';
 import Welcome from './components/Welcome/Welcome';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
+import Contact from './components/Contact/Contact';
 
 import React, { useRef, useEffect } from 'react';
 
 import { render } from './wave';
 
 let previousScrollTop = 0;
-let scrollingDown = false;
 let currentColors = 0;
 
 const WAVE_COLORS = [
@@ -20,16 +20,32 @@ const WAVE_COLORS = [
 
 window.onscroll = () => {
     const nextScrollTop = window.pageYOffset;
-    scrollingDown = previousScrollTop < nextScrollTop;
     previousScrollTop = nextScrollTop;
+    
+    const projectElm = document.getElementById('projects') as HTMLDivElement;
+    const skillsElm = document.getElementById('skills-section') as HTMLDivElement;
+    const contactElm = document.getElementById('contact-section') as HTMLDivElement;
+
+    const projectPos = projectElm.getBoundingClientRect().top;
+    const skillsPos = skillsElm.getBoundingClientRect().top;
+    const contactPos = contactElm.getBoundingClientRect().top;
+
+    console.log(skillsPos);
+    
 
     if (previousScrollTop < 200) {
       currentColors = 0;
       changeActiveNav(0);
     }
-    if (previousScrollTop > 200) {
+    if (projectPos < 500 && skillsPos > 500) {
       currentColors = 1;
       changeActiveNav(1);
+    }
+    if (skillsPos < 500 && skillsPos > 1) {
+      changeActiveNav(2);
+    }
+    if (skillsPos < 1) {
+      changeActiveNav(3);
     }
 }
 
@@ -63,14 +79,15 @@ function App() {
     <div className="App">
       <Navigation/>
       <Welcome/>
-      <div className="division project-division">
-        <h3>.projects</h3>
+      <div className="division-container">
+      <h3 className="division project-division">.projects</h3>
       </div>
       <Projects/>
-      <div className="division skills-division">
-        <h3>.skills</h3>
+      <div className="division-container" id="skills-hop">
+      <h3 className="division skill-division">.skills</h3>
       </div>
       <Skills/>
+      <Contact/>
       <canvas ref={canvasRef} height="50" className="wave-xp" id="wave-canvas"></canvas>
     </div>
   );
