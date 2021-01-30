@@ -1,6 +1,6 @@
 import './style.scss';
 
-const skills = ['JavaScript', 'TypeScript', 'HTML', 'S(CSS)', 'React', 'Redux'];
+const skills = ['JavaScript', 'TypeScript', 'HTML', 'S(CSS)', 'React', 'Redux', 'Git', 'Figma'];
 
 const Skills = () => {
 
